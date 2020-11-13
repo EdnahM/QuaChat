@@ -1,0 +1,66 @@
+{% extends "formslayout.html" %}
+{% block content %}
+<div id="container-login">
+    <div id="title">
+        <i class="material-icons lock">lock</i> Login
+    </div>
+
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <div class="input">
+            <div class="input-addon">
+                <i class="material-icons">face</i>
+            </div>
+            {{ form.email.label(class="form-control-label") }}
+            {% if form.email.errors %} 
+            {{form.email(class="form-control form-control-lg is-invalid") }}
+            <div class="invalid-feedback">
+                {% for error in form.email.errors %}
+                <span> {{ error }}</span>
+                {% endfor %}
+            </div>
+                {% else %}
+                {{ form.email(class="form-control form-control-lg")}}
+                {% endif %}
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="input">
+            <div class="input-addon">
+                <i class="material-icons">vpn_key</i>
+            </div>
+            {{ form.password.label(class="form-control-label") }}
+            {% if form.password.errors %} 
+            {{form.password(class="form-control form-control-lg is-invalid") }}
+            <div class="invalid-feedback">
+                {% for error in form.password.errors %}
+                <span> {{ error }}</span>
+                {% endfor %}
+            </div>
+                {% else %}
+                {{ form.password(class="form-control form-control-lg")}}
+                {% endif %}
+        </div>
+
+        <div class="remember-me">
+            {{ form.remember(class="form-check-input")}}
+            {{ form.remember.label(class="form-check-label")}}
+        </div>
+        {{ form.submit(class = "btn btn-success btn-lg btn-block font-18") }}
+    </form>
+
+    <div class="forgot-password">
+        <a href={{ url_for('reset_request') }}>Forgot your password?</a>
+    </div>
+    <div class="privacy">
+        <a href="#">Privacy Policy</a>
+    </div>
+
+    <div class="register">
+        Don't have an account yet?
+        <a  href="{{ url_for('register') }}"><button id="register-link">Sign
+            up</button></a>
+    </div>
+</div>
+{% endblock content%}

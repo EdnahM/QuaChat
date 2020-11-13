@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {% if title %}
+        <title>Quabot Health - {{ title }}</title>
+            {% else %}
+        <title>Quabot Health</title>
+        {% endif %}
+    <link rel="icon" href="img/favicon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
+
+    <style>
+        body {
+            background-color: rgb(22, 21, 22);
+        }
+    </style>
+</head>
+<body>
+    <!--::header part start::-->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="{{ url_for('home') }}">Quabot Health</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('home') }}">Chat</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            {% if current_user.is_authenticated %} 
+              <li><a href="{{ url_for('account') }}"><span class="glyphicon glyphicon-user"></span> Account </a></li>
+              <li><a href="{{ url_for('logout') }}"><span class="glyphicon glyphicon-log-out"></span> Logout </a></li>
+              {% else %}
+            <li><a href="{{ url_for('register') }}"><span class="glyphicon glyphicon-user"></span> Sign Up </a></li>
+            <li><a href="{{ url_for('login') }}"><span class="glyphicon glyphicon-log-in"></span> Login </a></li>
+            {% endif %}
+          </ul>
+        </div>
+      </nav> 
+    <!-- Header part end-->
+
+        <!--Body Extended Content-->
+        <div>
+            {% with messages = get_flashed_messages(with_categories = true) %}
+            {% if messages %}
+            {% for category,message in messages %}
+            <div class = "alert alert-{{ category }}">
+                {{ message }}
+            </div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+            {% block content %}{% endblock %}
+        </div>
+        
+        <!--End of the body Extended Content-->
+</body>
+<!-- Javascript Notation -->
+<script src="{{ url_for('static', filename='js/jquery-1.12.1.min.js') }}"></script>
+<!-- popper js -->
+<script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+<!-- bootstrap js -->
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<!-- custom js -->
+<script src="{{url_for('static', filename='js/custom.js') }}"></script>
+
+</html>

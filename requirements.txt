@@ -1,0 +1,11 @@
+flask
+tensorflow
+nltk
+flask_login
+email_validator==2.0.0
+flask_wtf==0.14.3
+pillow==8.0.1
+flask_sqlalchemy==1.1.1
+flask_bycrypt==0.7.1
+
+

@@ -1,0 +1,140 @@
+<!-- Begining of New Index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if title %}
+    <title>Quabot Health - {{ title }}</title>
+        {% else %}
+    <title>Quabot Health</title>
+    {% endif %}
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename = "css/main.css")  }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+</head>
+<body>
+    <!-- <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="{{ url_for('home') }}">Quabot Health</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('home') }}">Chat</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            {% if current_user.is_authenticated %} 
+              <li><a href="{{ url_for('account') }}"><span class="glyphicon glyphicon-user"></span> Account </a></li>
+              <li><a href="{{ url_for('logout') }}"><span class="glyphicon glyphicon-log-out"></span> Logout </a></li>
+              {% else %}
+            <li><a href="{{ url_for('register') }}"><span class="glyphicon glyphicon-user"></span> Sign Up </a></li>
+            <li><a href="{{ url_for('login') }}"><span class="glyphicon glyphicon-log-in"></span> Login </a></li>
+            {% endif %}
+          </ul>
+        </div>
+      </nav>  -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="{{ url_for('home') }}">Quabot Health</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('chat') }}">Chat</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            {% if current_user.is_authenticated %} 
+              <li><a href="{{ url_for('account') }}"><span class="glyphicon glyphicon-user"></span> Account </a></li>
+              <li><a href="{{ url_for('logout') }}"><span class="glyphicon glyphicon-log-out"></span> Logout </a></li>
+              {% else %}
+            <li><a href="{{ url_for('register') }}"><span class="glyphicon glyphicon-user"></span> Sign Up </a></li>
+            <li><a href="{{ url_for('login') }}"><span class="glyphicon glyphicon-log-in"></span> Login </a></li>
+            {% endif %}
+          </ul>
+        </div>
+      </nav> 
+    <div>
+        {% with messages = get_flashed_messages(with_categories = true) %}
+        {% if messages %}
+        {% for category,message in messages %}
+        <div class = "alert alert-{{ category }}">
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </div>
+    <div>
+    <section class="section">
+        <button class="chat-btn"><i class="material-icons"> comment_bank </i></button>
+    
+        <div class="chat-popup">
+            <div class="badge">1</div>
+            <div class="chat-area">
+                <div class="income-msg">
+                    <img src="{{ url_for('static', filename='img/image.png') }}" alt="" class="avatar">
+                    <span class="msg">Hi There!</span>
+                    <span class="msg">Please try typing full sentences as I am still learning!</span>
+                    
+                </div>
+            </div>
+            <div class="input-area">
+                <input type="text" id="input">
+                <button id="emoji-btn">  &#127773; </button>
+                <button class="submit"><i class="material-icons"> eco </i></button>
+            </div>
+        </div>
+    </section>
+</div>
+   <div class="main">
+   <section>
+       <img class="mySlides" src="{{ url_for('static', filename='img/image1.png') }}" style="width: 100%;">
+       <img class="mySlides" src="{{ url_for('static', filename='img/image2.png') }}" style="width: 100%;">
+       <img class="mySlides" src="{{ url_for('static', filename='img/image3.jpg') }}" style="width: 100%;">
+   </section>
+   <section class="w3-container w3-center" style="max-width: 600px;">
+        <h2 class="w3-wide"> QUABOT HEALTH </h2>
+        <p class="w3-opacity"><i>Welcome to Quabot</i health we here for you.></p>
+    </section>
+    <section class="w3-container w3-content w3-center" style="max-width:600px">
+    <p class="w3-justify">
+        A web page that can be integrated with a chat service in the health sector.
+    </p>
+    </section>
+    <section class="w3-row-padding w3-center w3-light-grey">
+        <article class="w3-third">
+            <p>Doctor Eddy</p>
+            <img src="{{ url_for('static', filename='img/doc1.jpg') }}" alt="Doctor Eddy" style="width: 100%;">
+        </article>
+        <article class="w3-third">
+            <p>Doctor Eddy</p>
+            <img src="{{ url_for('static', filename='img/doc1.jpg') }}" alt="Doctor Eddy" style="width: 100%;">
+        </article>
+        <article class="w3-third">
+            <p>Doctor Eddy</p>
+            <img src="{{ url_for('static', filename='img/doc3.jpg') }}" alt="Doctor Eddy" style="width: 100%;">
+        </article>
+    </section>
+    <footer class="footer w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+        <a href="#"><i class="fa fa-facebook-official"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin-square"></i></a>
+        <a href="#"><i class="fa fa-flickr"></i></a>
+        <a href="#"><i class="fa fa-pinterest-p"></i></a>
+        <p  class="w3-medium">Powered by <a href="#">Eddycoders</a></p>
+    </footer>
+</div>
+    <script src="{{ url_for('static',filename='./js/jquerymin.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@3.0.3/dist/index.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

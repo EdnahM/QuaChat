@@ -1,0 +1,108 @@
+{% extends "navbar.html" %}
+{% block content %}
+<div id="container-login">
+    <div id="title">
+        <i class="material-icons lock">lock</i> Reset Password
+    </div>
+
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <div class="input">
+            <div class="inputpassword">
+                <div class="input-addon">
+                    <i class="material-icons">vpn_key</i>
+                </div>
+                {{ form.confirm_password.label(class="form-control-label") }}
+                {% if form.confirm_password.errors %} 
+                {{form.confirm_password(class="form-control form-control-lg is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.confirm_password.errors %}
+                    <span> {{ error }}</span>
+                    {% endfor %}
+                </div>
+                    {% else %}
+                    {{ form.confirm_password(class="form-control form-control-lg")}}
+                    {% endif %}
+            </div>
+
+        <div class="clearfix"></div>
+
+        <div class="input">
+            <div class="input-addon">
+                <i class="material-icons">vpn_key</i>
+            </div>
+            {{ form.password.label(class="form-control-label") }}
+            {% if form.password.errors %} 
+            {{form.password(class="form-control form-control-lg is-invalid") }}
+            <div class="invalid-feedback">
+                {% for error in form.password.errors %}
+                <span> {{ error }}</span>
+                {% endfor %}
+            </div>
+                {% else %}
+                {{ form.password(class="form-control form-control-lg")}}
+                {% endif %}
+        </div>
+
+        <div class="remember-me">
+            {{ form.remember(class="form-check-input")}}
+            {{ form.remember.label(class="form-check-label")}}
+        </div>
+        {{ form.submit(class = "btn btn-success btn-lg btn-block font-18") }}
+    </form>
+
+    <div class="privacy">
+        <a href="#">Privacy Policy</a>
+    </div>
+
+    <div class="register">
+        Don't have an account yet?
+        <a  href="{{ url_for('register') }}"><button id="register-link">Sign
+            up</button></a>
+    </div>
+</div>
+<!-- <div class="content-section">
+<div className="card-body">
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+    <div className="form-head">
+        <Link to="/" className="logo"><img
+            src="{{ url_for('static', filename ='/images/logo.svg') }}" className="img-fluid"
+            alt="logo"/></Link>
+    </div>
+    <fieldset class="form-group">
+        <legend class="border-bottom mb-4">Reset Password</legend>
+        <div class="form-group">
+            {{ form.password.label(class="form-control-label") }}
+            {% if form.password.errors %} 
+            {{ form.password(class="form-control form-control-lg is-invalid") }}
+            <div class="invalid-feedback">
+                {% for error in form.password.errors %}
+                <span> {{ error }}</span>
+                {% endfor %}
+            </div>
+                {% else %}
+                {{ form.password(class="form-control form-control-lg")}}
+                {% endif %}
+        </div>
+        <div class="form-group">
+            {{ form.confirm_password.label(class="form-control-label") }}
+            {% if form.confirm_password.errors %} 
+            {{ form.confirm_password(class="form-control form-control-lg is-invalid") }}
+            <div class="invalid-feedback">
+                {% for error in form.confirm_password.errors %}
+                <span> {{ error }}</span>
+                {% endfor %}
+            </div>
+                {% else %}
+                {{ form.confirm_password(class="form-control form-control-lg")}}
+                {% endif %}
+        </div>
+    </fieldset>
+    </div>
+    <div class = "form-group">
+        {{ form.submit(class = "btn btn-success btn-lg btn-block font-18") }}
+    </div>
+</form>                                
+    </div> -->
+{% endblock content %}

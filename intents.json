@@ -1,0 +1,309 @@
+{"intents": [
+    {
+        "tag":"greetings",
+        "patterns":["Hey","Hello","Watsup","Hi","Sasa","Niaje","Anyone"],
+        "responses":["Hello too, Quabot is here:What is your name?","Hi,quabot is here,Tell me your name?","Hey,am Quabot,kindly tell me your name","Hi am quabot, kindly tell me your name?"],
+        "context": []
+
+    },
+    {
+        "tag":"nameOne",
+        "patterns":["Edna Mugoh","Edna","Miss Edna","Edna Mugoh"],
+        "responses":["Yes Edna how can I help you","Yes Miss,How can I help you","How can I help you Edna","Yes Edna,How can I help you"],
+        "context": []
+    },
+    {
+        "tag":"nameTwo",
+        "patterns":["Mr Omuya","Am Mr Erick Omuya","Mr Erick","Erick Omuya is my name"],
+        "responses":["Yes Mr Omuya how can I help you","Yes Sir,How can I help you","How can I help you Mr Omuya","Yes Mr Omuya,How can I help you"],
+        "context": []
+    },
+    {
+        "tag":"nameThree",
+        "patterns":["Mr Raphael","Am Mr Raphael","Rahphael is my name","I am Rahpael"],
+        "responses":["Yes Mr Raphael how can I help you","Yes Sir,How can I help you","How can I help you Mr Raphael","Yes Mr Raphael,How can I help you"],
+        "context": []
+    },
+    {
+        "tag":"nameFour",
+        "patterns":["Miss","Mrs","Madam","Madam Tess","Miss Mugoh"],
+        "responses":["Yes madam how can I help you","Yes madam,How can I help you","How can I help you Madam","Madam,How can I help you"],
+        "context": []
+    },
+    {
+        "tag":"nameFive",
+        "patterns":["Miss Grace Nyakorema","Grace Nyakorema","Madam Grace","I am Grace Nyakorema","My name is Grace Nyakorema."],
+        "responses":["Yes Grace how can I help you","Yes Madam,How can I help you","How can I help you Madam Grace","Madam Grace,How can I help you"],
+        "context": []
+    },
+    {
+        "tag":"thanks",
+        "patterns":["Thanks","Thankyou","Asanti","Awesome,Thanks","Thanks for heping me","That's Helpfull"],
+        "responses":["Happy to Help!","Anytime","My pleasure","I am glad I helped"],
+        "context":[]
+
+    },
+    {
+        "tag":"Satisfaction",
+        "patterns":["Ok","Okay","Yes,lets start","Tell me","PLease make me feel better","Fine,Lets start"],
+        "responses":["Okay,Please tell me Your Name,Age,Gender","Lets Begin by you telling me Your Name,Age,Gender","What is your name,Age and Gender"],
+        "context": []
+    },
+    {
+        "tag":"empty",
+        "patterns":[],
+        "responses":["Sorry,I didn't get you please come again","Please,pardon I didn't get you"],
+        "context": []
+    },
+    {
+        "tag":"general",
+        "patterns":["What can you do for me?","How are you to assist me","Can I trust you"],
+        "responses":["Yes ,Am here to answer any of your struggles in the Health sector","Trust me,I am going to make you feel better by the end of the session"],
+        "context": []
+    },
+    {
+        "tag":"advisory",
+        "patterns":["what is Obessity","What can I do to reduce weight","What are the effects of obessity"],
+        "responses":["Obessity is the excess gain of weight where the Body mass index is not accordingly with your height","You should start by cutting of curb intakes to be  able to control your weights"],
+        "context": []
+    },
+    {
+        "tag":"Covid19",
+        "patterns":["Fever","I have fever","Have cold","I have a cold","I have a fever","Having a fever","Fever"],
+        "responses":["Do you have any of the following symptomps. Kindly reply with the precise symptomps. 1.shortness of breath 2.high fever 3.General weakness 4.Dry cough 5.Tiredness","Do you feel any of the following symptomps. Kindly reply with the precise symptomps or number of the symptom: 1.shortness of breath 2.high fever 3.General weakness 4.Dry cough 5.Tiredness"],
+        "context":[]
+    },
+    {
+        "tag":"answerCovid",
+        "patterns":["General weakness,shortness of breath, high fever, dry cough, tiredness","shortness of breath,high fever,dry cough,tiredness,general weakness","1,2,3,4,5","12345","I have shortness of breath,difficulties in breathing,general tiredness, high fever,"],
+        "responses":["How long have you been be feeling that way","How, long have you been feeling sick?","how long have you been feeling sick?"],
+        "context":[]
+    },
+    {
+        "tag":"lengthcovid",
+        "patterns":["1 MONTH","one week","1 week","2 months","One year","1 "],
+        "responses":["That is so long,do you have an allergy?","That is long,do you have any allergy?","Long time,Do you have any allergy"],
+        "context":[]
+    },
+    {
+        "tag":"dayCovid",
+        "patterns":["1 day","Days","Two days","4 days","4 days","2 days","days","5 days","6 days","7 days","four days"],
+        "responses":["Have you been travelling of late","Have you travelled of late"],
+        "context":[]
+    },
+    {
+        "tag":"NoTravel",
+        "patterns":["I have not travelled lately","I have not travelled lately","I have not travelled lately","No I havent travelled a lately"],
+        "responses":["Do you have some conditions like asthma","Do you have Asthma","Do you have any condition like asthma"],
+        "context":[]
+    },
+    {
+        "tag":"noAsthma",
+        "patterns":["I dont have asthma","No I dont have asthma","I do not have asthma","No I dont have asthma"],
+        "responses":["Have you done a covid checkup","Have you taken a covid19","Kindly conside taking a covid19 checkup"],
+        "context":[]
+    },
+    {
+        "tag":"AllergyAnswer",
+        "patterns":["Yes,dust allergy", "Yes I have dust and cold allergy","I have cold and dust allergy"],
+        "responses":["Do you experience any of these symptomps like:itching,sneezing and watery eyes","Are you experienceing either of these symptomps: 1 itching nose 2.sneezing  3.Watery eyes 4.stuffy nose"],
+        "context":[]
+    },
+    {
+        "tag":"AllergysAnswer",
+        "patterns":["I have itching,sneezing and watery eyes, stuffy nose","Itching,stuffy nose, sneezing and watery eyes","I having an itching nose,sneezing,stuff nose and watery eyes"],
+        "responses":["Are you under any medication","Do you do any medication","Do you take any medicine"],
+        "context":[]
+    },
+    {
+        "tag":"AllergytAnswer",
+        "patterns":["Yes am taking allergy medication","am taking allergy medication","taking some allergy medication","yes it is the allergy medication over the counter drugs","just OTC drugs","I take Over the Counter drugs"],
+        "responses":["Have you taken some Covid19 checkup","You must be feeling better,Have you taken any Covid19 checkup","Have you taken the Covid19 checkup?"],
+        "context":[]
+    },
+    {
+        "tag":"NoCovidCheckup",
+        "patterns":["Not yet done any covid checkup","No Covid checkup done","I have not done the covid 19 checkup yet","I have not done any checkup","Not yet done the covid19 checkup","I have not done the covid 19 checkup yet","No Covi checkup","Not done it,the covid checkup"],
+        "responses":["Kindly consider taking the Covid19 checkup?","Kindly consider taking a checkup on Covid19","You should consider carrying out a Covid 19 checkup"],
+        "context":[]
+    },
+    {
+        "tag":"YesCovidCheckup",
+        "patterns":["Yes I have done a covid checkup","I have done a covid checkup","Yes covid checkup has been done","Yes I have done covidcheckup","I have done the covidcheckup","I have infact carried out the Covid checkup"],
+        "responses":["How were the result?","How were the covid results"],
+        "context":[]
+    },
+    {
+        "tag":"PositiveCovid",
+        "patterns":["I tested positive","They were positive","I tested positive","The results were positive","Had a positive result","The results turned positive","I was positivepositive"],
+        "responses":["You should be under quarantine,are you feeling better as days go by.","I hope you are under self-quarantine, how is the progress?","I hope you quarantined your self,how is the progress"],
+        "context":[]
+    },
+    {
+        "tag":"negativeCovid",
+        "patterns":["I tested negative","The test was negative","I had a negative test on the covid 19","my results returned negative on Covid19","Tested negative","Results were negative","I had negative results o covid19"],
+        "responses":["Kindly do checkup on body allergies and body health","Consider taking a body check up on allergies","Please consider taking a body checkup on any allergies"],
+        "context":[]
+    },
+    {
+        "tag":"DoCheckup",
+        "patterns":["I will consider doing a checkup","Sure I will do a checkup","I will consider doing a chekup","Thanks I will do a chekup and see what is the issue","I will consider doing a checkup,Thanks"],
+        "responses":["Good, get well soon","Sure, you will feel better","Am sure you will feel better"],
+        "context":[]
+    },
+
+    {
+        "tag":"greetingsf",
+        "patterns":["Hey","Hello","Watsup","Hi","Sasa","Niaje","Anyone"],
+        "responses":["Hello too, Quabot is here:What is your name?","Hi,quabot is here,Tell me your name?","Hey,am Quabot,kindly tell me your name","Hi am quabot, kindly tell me your name?"],
+        "context": []
+
+    },
+    {
+        "tag":"nameOnef",
+        "patterns":["Edna Mugoh","Edna","Miss Edna","Edna Mugoh"],
+        "responses":["Yes Edna how can I help you","Yes Miss,How can I help you","How can I help you Edna","Yes Edna,How can I help you"],
+        "context": []
+    },
+    {
+        "tag":"nameTwof",
+        "patterns":["Mr Omuya","Am Mr Erick Omuya","Mr Erick","Erick Omuya is my name"],
+        "responses":["Yes Mr Omuya how can I help you","Yes Sir,How can I help you","How can I help you Mr Omuya","Yes Mr Omuya,How can I help you"],
+        "context": []
+    },
+    {
+        "tag":"nameThree",
+        "patterns":["Mr Raphael","Am Mr Raphael","Rahphael is my name","I am Rahpael"],
+        "responses":["Yes Mr Raphael how can I help you","Yes Sir,How can I help you","How can I help you Mr Raphael","Yes Mr Raphael,How can I help you"],
+        "context": []
+    },
+    {
+        "tag":"nameFourf",
+        "patterns":["Miss","Mrs","Madam","Madam Tess","Miss Mugoh"],
+        "responses":["Yes madam how can I help you","Yes madam,How can I help you","How can I help you Madam","Madam,How can I help you"],
+        "context": []
+    },
+    {
+        "tag":"nameFivef",
+        "patterns":["Miss Grace Nyakorema","Grace Nyakorema","Madam Grace","I am Grace Nyakorema","My name is Grace Nyakorema."],
+        "responses":["Yes Grace how can I help you","Yes Madam,How can I help you","How can I help you Madam Grace","Madam Grace,How can I help you"],
+        "context": []
+    },
+    {
+        "tag":"thanksf",
+        "patterns":["Thanks","Thankyou","Asanti","Awesome,Thanks","Thanks for heping me","That's Helpfull"],
+        "responses":["Happy to Help!","Anytime","My pleasure","I am glad I helped"],
+        "context":[]
+
+    },
+    {
+        "tag":"Satisfactionf",
+        "patterns":["Ok","Okay","Yes,lets start","Tell me","PLease make me feel better","Fine,Lets start"],
+        "responses":["Okay,Please tell me Your Name,Age,Gender","Lets Begin by you telling me Your Name,Age,Gender","What is your name,Age and Gender"],
+        "context": []
+    },
+    {
+        "tag":"emptyf",
+        "patterns":[],
+        "responses":["Sorry,I didn't get you please come again","Please,pardon I didn't get you"],
+        "context": []
+    },
+    {
+        "tag":"generalf",
+        "patterns":["What can you do for me?","How are you to assist me","Can I trust you"],
+        "responses":["Yes ,Am here to answer any of your struggles in the Health sector","Trust me,I am going to make you feel better by the end of the session"],
+        "context": []
+    },
+    {
+        "tag":"advisoryf",
+        "patterns":["what is Obessity","What can I do to reduce weight","What are the effects of obessity"],
+        "responses":["Obessity is the excess gain of weight where the Body mass index is not accordingly with your height","You should start by cutting of curb intakes to be  able to control your weights"],
+        "context": []
+    },
+    {
+        "tag":"Covid19f",
+        "patterns":["Fever","I have fever","Have cold","I have a cold","I have a fever","Having a fever","Fever"],
+        "responses":["Do you have any of the following symptomps. Kindly reply with the precise symptomps. 1.shortness of breath 2.high fever 3.General weakness 4.Dry cough 5.Tiredness","Do you feel any of the following symptomps. Kindly reply with the precise symptomps or number of the symptom: 1.shortness of breath 2.high fever 3.General weakness 4.Dry cough 5.Tiredness"],
+        "context":[]
+    },
+    {
+        "tag":"answerCovidf",
+        "patterns":["General weakness,shortness of breath, high fever, dry cough, tiredness","shortness of breath,high fever,dry cough,tiredness,general weakness","1,2,3,4,5","12345","I have shortness of breath,difficulties in breathing,general tiredness, high fever,"],
+        "responses":["How long have you been be feeling that way","How, long have you been feeling sick?","how long have you been feeling sick?"],
+        "context":[]
+    },
+    {
+        "tag":"lengthcovidf",
+        "patterns":["1 MONTH","one week","1 week","2 months","One year","1 "],
+        "responses":["That is so long,do you have an allergy?","That is long,do you have any allergy?","Long time,Do you have any allergy"],
+        "context":[]
+    },
+    {
+        "tag":"dayCovidf",
+        "patterns":["1 day","Days","Two days","4 days","4 days","2 days","days","5 days","6 days","7 days","four days"],
+        "responses":["Have you been travelling of late","Have you travelled of late"],
+        "context":[]
+    },
+    {
+        "tag":"NoTravelf",
+        "patterns":["I have not travelled lately","I have not travelled lately","I have not travelled lately","No I havent travelled a lately"],
+        "responses":["Do you have some conditions like asthma","Do you have Asthma","Do you have any condition like asthma"],
+        "context":[]
+    },
+    {
+        "tag":"noAsthma",
+        "patterns":["I dont have asthma","No I dont have asthma","I do not have asthma","No I dont have asthma"],
+        "responses":["Have you done a covid checkup","Have you taken a covid19","Kindly conside taking a covid19 checkup"],
+        "context":[]
+    },
+    {
+        "tag":"AllergyAnswerf",
+        "patterns":["Yes,dust allergy", "Yes I have dust and cold allergy","I have cold and dust allergy"],
+        "responses":["Do you experience any of these symptomps like:itching,sneezing and watery eyes","Are you experienceing either of these symptomps: 1 itching nose 2.sneezing  3.Watery eyes 4.stuffy nose"],
+        "context":[]
+    },
+    {
+        "tag":"AllergysAnswerf",
+        "patterns":["I have itching,sneezing and watery eyes, stuffy nose","Itching,stuffy nose, sneezing and watery eyes","I having an itching nose,sneezing,stuff nose and watery eyes"],
+        "responses":["Are you under any medication","Do you do any medication","Do you take any medicine"],
+        "context":[]
+    },
+    {
+        "tag":"AllergytAnswerf",
+        "patterns":["Yes am taking allergy medication","am taking allergy medication","taking some allergy medication","yes it is the allergy medication over the counter drugs","just OTC drugs","I take Over the Counter drugs"],
+        "responses":["Have you taken some Covid19 checkup","You must be feeling better,Have you taken any Covid19 checkup","Have you taken the Covid19 checkup?"],
+        "context":[]
+    },
+    {
+        "tag":"NoCovidCheckup",
+        "patterns":["Not yet done any covid checkup","No Covid checkup done","I have not done the covid 19 checkup yet","I have not done any checkup","Not yet done the covid19 checkup","I have not done the covid 19 checkup yet","No Covi checkup","Not done it,the covid checkup"],
+        "responses":["Kindly consider taking the Covid19 checkup?","Kindly consider taking a checkup on Covid19","You should consider carrying out a Covid 19 checkup"],
+        "context":[]
+    },
+    {
+        "tag":"YesCovidCheckupff",
+        "patterns":["Yes I have done a covid checkup","I have done a covid checkup","Yes covid checkup has been done","Yes I have done covidcheckup","I have done the covidcheckup","I have infact carried out the Covid checkup"],
+        "responses":["How were the result?","How were the covid results"],
+        "context":[]
+    },
+    {
+        "tag":"PositiveCovidf",
+        "patterns":["I tested positive","They were positive","I tested positive","The results were positive","Had a positive result","The results turned positive","I was positivepositive"],
+        "responses":["You should be under quarantine,are you feeling better as days go by.","I hope you are under self-quarantine, how is the progress?","I hope you quarantined your self,how is the progress"],
+        "context":[]
+    },
+    {
+        "tag":"negativeCovidf",
+        "patterns":["I tested negative","The test was negative","I had a negative test on the covid 19","my results returned negative on Covid19","Tested negative","Results were negative","I had negative results o covid19"],
+        "responses":["Kindly do checkup on body allergies and body health","Consider taking a body check up on allergies","Please consider taking a body checkup on any allergies"],
+        "context":[]
+    },
+    {
+        "tag":"DoCheckupf",
+        "patterns":["I will consider doing a checkup","Sure I will do a checkup","I will consider doing a chekup","Thanks I will do a chekup and see what is the issue","I will consider doing a checkup,Thanks"],
+        "responses":["Good, get well soon","Sure, you will feel better","Am sure you will feel better"],
+        "context":[]
+    }
+
+]
+}

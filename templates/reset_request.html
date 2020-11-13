@@ -1,0 +1,77 @@
+{% extends "formslayout.html" %}
+{% block content %}
+<div id="container-login">
+    <div id="title">
+        <i class="material-icons lock">lock</i> Reset Password
+    </div>
+
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <div class="input">
+            <div class="input-addon">
+                <i class="material-icons">face</i>
+            </div>
+            {{ form.email.label(class="form-control-label") }}
+            {% if form.email.errors %} 
+            {{form.email(class="form-control form-control-lg is-invalid") }}
+            <div class="invalid-feedback">
+                {% for error in form.email.errors %}
+                <span> {{ error }}</span>
+                {% endfor %}
+            </div>
+                {% else %}
+                {{ form.email(class="form-control form-control-lg")}}
+                {% endif %}
+        </div>
+        <div class="clearfix"></div>
+        <div class="remember-me">
+            {{ form.remember(class="form-check-input")}}
+            {{ form.remember.label(class="form-check-label")}}
+        </div>
+        
+        {{ form.submit(class = "btn btn-success btn-lg btn-block font-18") }}
+    </form>
+
+    <div class="privacy">
+        <a href="#">Privacy Policy</a>
+    </div>
+
+    <div class="register">
+        Don't have an account yet?
+        <a  href="{{ url_for('register') }}"><button id="register-link">Sign
+            up</button></a>
+    </div>
+</div>
+
+<!-- <div class="content-section">
+<div className="card-body">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+        <div className="form-head">
+            <Link to="/" className="logo"><img
+                src="{{ url_for('static', filename ='/images/logo.svg') }}" className="img-fluid"
+                alt="logo"/></Link>
+        </div>
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Reset Password</legend>
+            <div class="form-group">
+                {{ form.email.label(class="form-control-label") }}
+                {% if form.email.errors %} 
+                {{ form.email(class="form-control form-control-lg is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.email.errors %}
+                    <span> {{ error }}</span>
+                    {% endfor %}
+                </div>
+                    {% else %}
+                    {{ form.email(class="form-control form-control-lg")}}
+                    {% endif %}
+            </div>
+        </fieldset>
+        </div>
+        <div class = "form-group">
+            {{ form.submit(class = "btn btn-success btn-lg btn-block font-18") }}
+        </div>
+    </form>                                
+</div> -->
+{% endblock content %}
